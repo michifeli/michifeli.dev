@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Mi Portfolio</title>
+  </head>
+  <body>
+    <slot name="header" />
+    <div class="page">
+      <div class="sheet">
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>
+
+<style>
+  .page {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* reduce top gap so sheet sits closer below the sticky header */
+    padding: var(--header-h) 20px 24px 20px; /* solo la altura de la nav-bar */
+    background: var(--bg);
+  }
+  .sheet {
+    width: 640px;
+    max-width: calc(100% - 40px);
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 40px;
+  }
+  @media (min-width: 1100px) {
+    .sheet {
+      width: 640px;
+    }
+  }
+</style>

@@ -1,0 +1,43 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<MainLayout>
+  <div slot="header">
+    <Navigation />
+  </div>
+
+  <main style="max-width:900px;margin:36px auto; padding:20px;">
+    <h1>Proyectos</h1>
+    <p class="muted">
+      Listado detallado de proyectos — más información y enlaces.
+    </p>
+
+    <section style="margin-top:28px">
+      <article class="card" style="margin-bottom:16px">
+        <h2>Proyecto A — Nombre</h2>
+        <p class="muted">
+          Descripción más extensa del proyecto A, qué problema resuelve,
+          tecnologías: Astro, TypeScript, Tailwind.
+        </p>
+        <p><a href="#">Demo</a> · <a href="#">Código</a></p>
+      </article>
+
+      <article class="card">
+        <h2>Proyecto B — Nombre</h2>
+        <p class="muted">
+          Descripción más extensa del proyecto B, enfoques y resultados.
+        </p>
+        <p><a href="#">Demo</a> · <a href="#">Código</a></p>
+      </article>
+    </section>
+
+    <p style="margin-top:24px" class="muted">
+      Volver a <a href="/">inicio</a>.
+    </p>
+  </main>
+
+  <Footer />
+</MainLayout>
