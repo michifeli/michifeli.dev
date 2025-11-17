@@ -13,5 +13,8 @@
     "astro": "^5.15.8",
     "sharp": "^0.34.5",
     "tailwindcss": "^4.1.17"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
