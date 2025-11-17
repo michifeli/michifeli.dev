@@ -2,14 +2,14 @@
 
 ---
 
-<header class="site-header">
+<header class="site-header" data-open="false">
   <nav>
     <div class="nav-inner">
       <div class="brand">
         <a href="/" class="muted">₍^. .^₎⟆</a>
       </div>
 
-      <div class="nav-links">
+      <div class="nav-links" id="main-nav">
         <a href="/">me</a>
         <a href="/projects">proyectos</a>
         <a href="/blog">blog</a>
@@ -36,6 +36,67 @@
           <span>web source</span>
         </a>
       </div>
+
+      <!-- hamburger toggle (mobile only) -->
+      <button
+        class="nav-toggle"
+        aria-expanded="false"
+        aria-controls="main-nav"
+        aria-label="Abrir menú"
+      >
+        <svg
+          class="hamburger"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          aria-hidden="true"
+          ><path fill="currentColor" d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"
+          ></path></svg
+        >
+        <svg
+          class="close"
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          aria-hidden="true"
+          style="display:none"
+          ><path
+            fill="currentColor"
+            d="M18.3 5.71L12 12l6.3 6.29-1.41 1.42L10.59 13.4 4.29 19.71 2.88 18.29 9.18 12 2.88 5.71 4.29 4.29 10.59 10.6 16.88 4.29z"
+          ></path></svg
+        >
+      </button>
+      <script>
+        (function () {
+          /** @type {HTMLElement | null} */
+          const header = /** @type {HTMLElement | null} */ (
+            document.querySelector(".site-header")
+          );
+          if (!header) return;
+
+          /** @type {HTMLElement | null} */
+          const btn = /** @type {HTMLElement | null} */ (
+            header.querySelector(".nav-toggle")
+          );
+          if (!btn) return;
+
+          btn.addEventListener("click", () => {
+            const open = header.getAttribute("data-open") === "true";
+            header.setAttribute("data-open", (!open).toString());
+            btn.setAttribute("aria-expanded", (!open).toString());
+
+            const ham = btn.querySelector(".hamburger");
+            const close = btn.querySelector(".close");
+
+            if (ham instanceof HTMLElement || ham instanceof SVGElement) {
+              ham.style.display = !open ? "none" : "inline";
+            }
+            if (close instanceof HTMLElement || close instanceof SVGElement) {
+              close.style.display = !open ? "inline" : "none";
+            }
+          });
+        })();
+      </script>
     </div>
   </nav>
 </header>

@@ -1,5 +1,6 @@
 ---
-
+import { Image } from "astro:assets";
+import michi from "../assets/michi.jpg"; // ajusta la ruta si este archivo NO está en src/layouts
 ---
 
 <main>
@@ -17,7 +18,15 @@
         </p>
         <p class="muted"><strong>¡Recuerda visitar mi blog!</strong></p>
       </div>
-      <img src="/src/assets/michi.jpg" alt="Mitchel Rojas" class="avatar" />
+
+      <Image
+        src={michi}
+        alt="Mitchel Rojas"
+        class="avatar"
+        width={280}
+        height={280}
+        loading="eager"
+      />
     </div>
   </section>
 

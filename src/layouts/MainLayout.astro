@@ -10,6 +10,45 @@ import "../styles/global.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Michel "michi" Rojas - web</title>
+    <!-- SEO defaults: override per-page by adding <meta> tags or a head fragment in pages -->
+    <meta
+      name="description"
+      content="Portfolio de Mitchel (Michi) Rojas — desarrollador, proyectos, blog y contacto."
+    />
+    <meta name="robots" content="index,follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Michel Michi Rojas - web" />
+    <meta
+      property="og:description"
+      content="Portfolio de Mitchel (Michi) Rojas — desarrollador, proyectos, blog y contacto."
+    />
+    <!-- Set a proper absolute URL in your astro.config.mjs as `site` and/or update og:url per-page -->
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Michel Michi Rojas - web" />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Mitchel (Michi) Rojas — desarrollador, proyectos, blog y contacto."
+    />
+
+    <!-- Structured data (Person) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mitchel Rojas",
+        "alternateName": "michi",
+        "jobTitle": "Desarrollador",
+        "url": "",
+        "sameAs": [
+          "https://github.com/michifeli",
+          "https://www.linkedin.com/in/mitchelrojas"
+        ]
+      }
+    </script>
   </head>
   <body>
     <slot name="header" />
