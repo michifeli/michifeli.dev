@@ -37,4 +37,4 @@ Recursos para aprender / profundizar en las tecnologías usadas:
 
 Si quieres aprender sobre cómo crear tu propio portfolio con Astro, empieza por la guía oficial y luego puedes revisar los archivos `src/components` y `src/layouts` de este repo como ejemplo práctico.
 
----
+<img src="https://user-images.githubusercontent.com/123886904/218294072-d474a330-7464-430a-b369-91f79373dbca.svg" width="100%" title="Footer">
